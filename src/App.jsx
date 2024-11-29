@@ -8,11 +8,10 @@ import Favs from "./Pages/Favs";
 import Home from "./Pages/Home";
 import { Route, Routes } from "react-router-dom";
 
-
 function App() {
   return (
       <div className="App">
-          <Navbar/>
+        <Navbar/>
           <Routes>
             <Route path={paths.home} element={<Home />} />
             <Route path={paths.Contacto} element={<Contact />} />
@@ -23,7 +22,7 @@ function App() {
               element={<h1>Page not found - Error 404</h1>}
             />
           </Routes>
-          <Footer/>
+        <Footer/>
       </div>
   );
 }
