@@ -1,5 +1,5 @@
 
-import { paths } from "./utils/path";
+import { paths } from "./Components/utils/path";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Contact from "./Pages/Contact";
