@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar";
 import Contact from "./Pages/Contact";
 import Detail from "./Pages/Detail";
 import Favs from "./Pages/Favs";
+import Home from "./Pages/Home";
 import { Route, Routes } from "react-router-dom";
 
 
