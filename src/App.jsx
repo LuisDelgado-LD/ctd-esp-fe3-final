@@ -2,9 +2,9 @@
 import { paths } from "./utils/path";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
-import Contacto from "./Pages/Contacto";
-import Detalles from "./Pages/Detalles";
-import Destacados from "./Pages/Destacados";
+import Contact from "./Pages/Contact";
+import Detail from "./Pages/Detail";
+import Favs from "./Pages/Favs";
 import { Route, Routes } from "react-router-dom";
 
 
@@ -14,9 +14,9 @@ function App() {
           <Navbar/>
           <Routes>
             <Route path={paths.home} element={<Home />} />
-            <Route path={paths.Contacto} element={<Contacto />} />
-            <Route path={paths.Detalles} element={<Detalles />} />
-            <Route path={paths.Destacados} element={<Destacados />} />
+            <Route path={paths.Contacto} element={<Contact />} />
+            <Route path={paths.Detalles} element={<Detail />} />
+            <Route path={paths.Destacados} element={<Favs />} />
             <Route
               path={paths.notFound}
               element={<h1>Page not found - Error 404</h1>}
