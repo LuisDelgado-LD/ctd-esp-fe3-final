@@ -15,7 +15,7 @@ function App() {
           <Routes>
             <Route path={paths.home} element={<Home />} />
             <Route path={paths.Contacto} element={<Contact />} />
-            <Route path={paths.Detalles} element={<Detail />} />
+            <Route path={paths.DetallesDinamico} element={<Detail />} />
             <Route path={paths.Destacados} element={<Favs />} />
             <Route
               path={paths.notFound}

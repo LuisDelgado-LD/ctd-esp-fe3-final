@@ -1,7 +1,8 @@
 export const paths = {
     home: "/",
     Contacto: "/contacto",
-    Detalles: "/informacionprofesional",
+    DetallesDinamico: "/informacionprofesional/:id",
+    DetallesEstatico: "/informacionprofesional/",
     Destacados: "/favoritos",
     notFound: "*",
   };

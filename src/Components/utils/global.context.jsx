@@ -3,13 +3,13 @@ import axios from "axios";
 import { reducer } from '../../reducers/reducer'
 import { useContext, useEffect } from "react";
 
-export const initialState = {theme: "", data: []}
+export const initialState = {theme: "", dentists: [], dentist: {}}
 
 export const ContextGlobal = createContext(undefined);
 
 export const ContextProvider = ({ children }) => {
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
-  const [Dentists, dispatch] = useReducer(reducer, initialState);
+  const [Data, dispatch] = useReducer(reducer, initialState);
   const API='https://jsonplaceholder.typicode.com/users'
   useEffect(() => {
     axios(API)
@@ -21,7 +21,7 @@ export const ContextProvider = ({ children }) => {
       });
   }, []);
   return (
-    <ContextGlobal.Provider value={{ Dentists, dispatch }}>
+    <ContextGlobal.Provider value={{ Data, dispatch }}>
       {children}
     </ContextGlobal.Provider>
   );
