@@ -4,5 +4,7 @@ export const reducer = (state, action) => {
             return {...state, dentists: action.payload}
         case "get_dentist":
             return {...state, dentist: action.payload}
+        case "change_theme":
+            return {...state, theme: action.payload}
     }
 }

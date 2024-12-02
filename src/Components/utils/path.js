@@ -3,7 +3,7 @@ export const paths = {
     Contacto: "/contacto",
     DetallesDinamico: "/informacionprofesional/:id",
     DetallesEstatico: "/informacionprofesional/",
-    Destacados: "/favoritos",
+    Destacados: "/favs",
     notFound: "*",
   };
   

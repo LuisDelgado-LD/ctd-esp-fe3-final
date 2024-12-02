@@ -3,7 +3,7 @@ import axios from "axios";
 import { reducer } from '../../reducers/reducer'
 import { useContext, useEffect } from "react";
 
-export const initialState = {theme: "", dentists: [], dentist: {}}
+export const initialState = {theme: "light", dentists: [], dentist: {}}
 
 export const ContextGlobal = createContext(undefined);
 
