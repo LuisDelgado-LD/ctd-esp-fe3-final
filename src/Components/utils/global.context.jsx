@@ -3,7 +3,10 @@ import axios from "axios";
 import { reducer } from '../../reducers/reducer'
 import { useContext, useEffect } from "react";
 
-export const initialState = {theme: "light", dentists: [], dentist: {}}
+
+const favlist = JSON.parse(localStorage.getItem("favlist")) || [];
+export const initialState = {theme: "light", dentists: [], dentist: {}, favlist}
+
 
 export const ContextGlobal = createContext(undefined);
 
@@ -19,6 +22,11 @@ export const ContextProvider = ({ children }) => {
       .catch((err) => {
         console.log(err);
       });
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("favlist", JSON.stringify(favlist));
+    console.log(Data.favlist)
   }, []);
   return (
     <ContextGlobal.Provider value={{ Data, dispatch }}>

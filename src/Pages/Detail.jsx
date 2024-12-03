@@ -28,7 +28,7 @@ const Detail = () => {
   return (
     <>
       <h1>Detail Dentist id </h1>
-      <Card name={Dentista.name} username={Dentista.username} id={Dentista.id}/>
+      <Card dentist={Dentista}/>
       <h3>Correo de contacto: {Dentista.email}</h3>
       <h3>Telefono de contacto: {Dentista.phone}</h3>
       <h3>Sition web: {Dentista.website}</h3>
