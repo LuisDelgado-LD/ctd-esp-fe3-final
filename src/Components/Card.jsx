@@ -3,11 +3,19 @@ import { Link, useLocation } from "react-router-dom";
 import { paths } from "./utils/path";
 
 
-const Card = ({ name, username, id }) => {
 
+
+const Card = ({ dentist }) => {
+  const name = dentist.name
+  const username = dentist.username
+  const id = dentist.id
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
+    const favList = JSON.parse(localStorage.getItem("favList")) || [];
+    if (!favList.some((fav) => fav.id === dentist.id)) {
+      localStorage.setItem("favList", JSON.stringify([...favList,dentist]));
   }
+}
 
   return (
     <div className="card">

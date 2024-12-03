@@ -5,6 +5,7 @@ import { useContext, useEffect } from "react";
 
 export const initialState = {theme: "light", dentists: [], dentist: {}}
 
+
 export const ContextGlobal = createContext(undefined);
 
 export const ContextProvider = ({ children }) => {
@@ -20,6 +21,7 @@ export const ContextProvider = ({ children }) => {
         console.log(err);
       });
   }, []);
+
   return (
     <ContextGlobal.Provider value={{ Data, dispatch }}>
       {children}
