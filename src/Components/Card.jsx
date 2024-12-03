@@ -1,12 +1,15 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { paths } from "./utils/path";
+import { useContextGlobal } from "../Components/utils/global.context";
+
 
 
 const Card = ({ name, username, id }) => {
-
+  const { dispatch } = useContextGlobal();
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
+    dispatch({ type: "add_favs_local", payload: id   });
   }
 
   return (

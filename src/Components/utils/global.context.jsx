@@ -2,8 +2,16 @@ import { createContext, useReducer } from "react";
 import axios from "axios";
 import { reducer } from '../../reducers/reducer'
 import { useContext, useEffect } from "react";
+// import Favs from "../../Pages/Favs";
 
-export const initialState = {theme: "light", dentists: [], dentist: {}}
+
+if (localStorage.getItem("favsIdList"))
+  console.log("Hay items")
+
+else
+  console.log("No hay items")
+const favsIdList = JSON.parse(localStorage.getItem("favsIdList"))|| [];
+export const initialState = {theme: "light", dentists: [], dentist: {}, favsIdList};
 
 export const ContextGlobal = createContext(undefined);
 
@@ -20,6 +28,9 @@ export const ContextProvider = ({ children }) => {
         console.log(err);
       });
   }, []);
+  useEffect(() => {
+    localStorage.setItem("favsIdList", JSON.stringify(Data.favsIdList));    
+  }, [Data.favsIdList]);
   return (
     <ContextGlobal.Provider value={{ Data, dispatch }}>
       {children}
