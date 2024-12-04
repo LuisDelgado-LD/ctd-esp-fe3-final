@@ -1,0 +1,28 @@
+.detailContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: left;
+  }
+
+  .detail {
+    padding-top: 190px;
+    padding-left: 10%;
+  }
+  
+  .detail h2, .detail h3 {
+    margin: 8px 0;
+  }
+
+  .detailContainer .card {
+    color:blue
+  }
+  
+  /* .detail_info {
+    margin-left: 32px;
+  }
+  
+  .detail_info h3 {
+    margin: 8px 0;
+  } */

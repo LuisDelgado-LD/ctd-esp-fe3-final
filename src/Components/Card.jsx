@@ -9,6 +9,8 @@ const Card = ({ dentist }) => {
   const name = dentist.name
   const username = dentist.username
   const id = dentist.id
+  // const locate = useLocation();
+  // console.log(locate)
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
     const favList = JSON.parse(localStorage.getItem("favList")) || [];
@@ -21,6 +23,7 @@ const Card = ({ dentist }) => {
     <div className="card">
         {/* En cada card deberan mostrar en name - username y el id */}
         <Link to={`${paths.DetallesEstatico}${id}`}>
+        <img src='/public/images/doctor.jpg'></img>
         <h2>{name}</h2>
         <h3>{username}</h3> 
         </Link>

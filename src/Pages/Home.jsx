@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <main className="" >
       <h1>Home</h1>
-      <div className='card-grid'>
+      <div className="card-grid">
         {/* Aqui deberias renderizar las cards */}
         {Data.dentists.map((Dentist) => (
           <Card key={Dentist.id} dentist={Dentist}/>
