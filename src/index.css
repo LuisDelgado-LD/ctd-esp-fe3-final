@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.details {
+  width: 800px;
+  margin: 0 auto;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -126,4 +130,14 @@ tr:nth-child(even) {
 }
 .dark > a {
   color: white;
+}
+
+nav .themeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
