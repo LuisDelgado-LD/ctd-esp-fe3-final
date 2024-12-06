@@ -96,11 +96,20 @@ form{
   border: 0.5px solid rgb(206, 217, 142);
 }
 
+@media (min-width: 1650px) {
+  .card-grid{
+    width: 1400px;
+  }
+}
+@media (max-width: 1650px) {
+  .card-grid{
+    width: 90vw;
+  }
+}
 .card-grid{
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
-  width: 80vw;
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
