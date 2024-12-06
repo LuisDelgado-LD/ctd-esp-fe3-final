@@ -13,7 +13,7 @@ const Card = ({ dentist, children }) => {
     <div className="card">
         {/* En cada card deberan mostrar en name - username y el id */}
         <Link to={`${paths.DetallesEstatico}${id}`}>
-        <img src='/public/images/doctor.jpg'></img>
+        <img src='/images/doctor.jpg'></img>
         <h2>{name}</h2>
         <h3>{username}</h3> 
         </Link>
