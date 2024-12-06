@@ -1,14 +1,24 @@
 .detailContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    text-align: left;
+    width: 100%;
+    text-align: center;
+  }
+
+  .detailRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
   }
 
   .detail {
     padding-top: 190px;
-    padding-left: 10%;
+    padding-left: 5%;
+    text-align: left;
   }
   
   .detail h2, .detail h3 {
@@ -18,11 +28,21 @@
   .detailContainer .card {
     color:blue
   }
-  
-  /* .detail_info {
-    margin-left: 32px;
+
+  .favButtonContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 16px;
+    align-items: center;
   }
   
-  .detail_info h3 {
-    margin: 8px 0;
-  } */
+  .favButton {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    /* background-color: rgba(136, 136, 136, 0.116); */
+    border: none;
+    /* cursor: pointer; */
+    text-align: center;
+  }

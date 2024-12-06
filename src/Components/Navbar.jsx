@@ -31,7 +31,8 @@ const Navbar = () => {
         <h2>Favs</h2>  
       </Link>
 
-      <button onClick={changeTheme}>Change theme</button>
+      <button className="themeButton" onClick={changeTheme}>
+        {Data.theme === "dark" ? ("☀️") : ("🌙")}</button>
     </nav>
   )
 }
