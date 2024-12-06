@@ -10,7 +10,9 @@ const Favs = () => {
       return <h4>Aún no tienes favoritos marcados</h4>
     else
     return favList.map((Dentist) => (
-      <Card key={Dentist.id} dentist={Dentist}/>
+      <Card key={Dentist.id} dentist={Dentist}> 
+        <h3>{Dentist.email}</h3>
+      </Card>
     ))
   }
   return (
