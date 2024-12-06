@@ -1,7 +1,5 @@
 import React from "react";
 import Card from "../Components/Card";
-import { useContextGlobal } from "../Components/utils/global.context";
-import { useEffect } from "react";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -9,11 +7,11 @@ const Favs = () => {
   const favList = JSON.parse(localStorage.getItem("favList")) || [];
   const output = () => {
     if (favList.length == 0)
-      return <h4>Aún no tienes favoritos marcados</h4>
+      return <h2>Aún no tienes favoritos marcados</h2>
     else
     return favList.map((Dentist) => (
       <Card key={Dentist.id} dentist={Dentist}> 
-        <h3>{Dentist.email}</h3>
+        <h4>{Dentist.email}</h4>
       </Card>
     ))
   }

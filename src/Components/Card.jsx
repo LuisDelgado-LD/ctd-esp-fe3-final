@@ -9,9 +9,6 @@ const Card = ({ dentist, children }) => {
   const name = dentist.name
   const username = dentist.username
   const id = dentist.id
-  // console.log(props)
-
-  
   return (
     <div className="card">
         {/* En cada card deberan mostrar en name - username y el id */}

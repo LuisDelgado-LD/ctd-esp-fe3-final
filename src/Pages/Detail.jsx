@@ -14,8 +14,6 @@ const Detail = () => {
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
   const { id } = useParams();
   const { Data, dispatch } = useContextGlobal();
-  // const l = useContextGlobal();
-  // console.log(l)
   const API= `https://jsonplaceholder.typicode.com/users/${id}`
   useEffect(() => {
     axios(API)

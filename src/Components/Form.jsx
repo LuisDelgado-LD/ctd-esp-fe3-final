@@ -22,7 +22,6 @@ const Form = () => {
     } else {
       setValidaciones({...validaciones, error:true});
     }
-    // console.log(validaciones)
   };
   const handleChange = (event) => {
     setUser({

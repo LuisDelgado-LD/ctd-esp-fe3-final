@@ -5,11 +5,7 @@ import { paths } from "./utils/path";
 const FavButt = ({ dentist }) => {
     const initialState = (JSON.parse(localStorage.getItem("favList"))||[]).some((fav) => fav.id === dentist.id);
     const [esFav, setFav] = useState(initialState);
-    // console.log(paths.DetallesEstatico+id)
-    // console.log(locate)
-    
     const addFav = ()=>{
-    // console.log(locate) 
     // Aqui iria la logica para agregar la Card en el localStorage
     const favList = JSON.parse(localStorage.getItem("favList"))||[]
     if (!esFav) {
