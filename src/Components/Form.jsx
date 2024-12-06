@@ -12,7 +12,6 @@ const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const correoRegex = /\w+@\w+\.\w{1,3}/;
-    console.log(datosUsuario)
     if (
       datosUsuario.nombre.trim().length >= 5 &&
       datosUsuario.nombre.trim().includes(" ") &&

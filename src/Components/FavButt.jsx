@@ -1,6 +1,4 @@
 import {React, useState} from "react";
-import { Link, useLocation } from "react-router-dom";
-import { paths } from "./utils/path";
 
 const FavButt = ({ dentist }) => {
     const initialState = (JSON.parse(localStorage.getItem("favList"))||[]).some((fav) => fav.id === dentist.id);

@@ -2,20 +2,9 @@ import { createContext, useReducer } from "react";
 import axios from "axios";
 import { reducer } from '../../reducers/reducer'
 import { useContext, useEffect } from "react";
-// import Favs from "../../Pages/Favs";
 
-
-if (localStorage.getItem("favsIdList"))
-  console.log("Hay items")
-
-else
-  console.log("No hay items")
-const favsIdList = JSON.parse(localStorage.getItem("favsIdList"))|| [];
-export const initialState = {theme: "light", dentists: [], dentist: {}, favsIdList};
-
-
+export const initialState = {theme: "light", dentists: [], dentist: {}};
 export const ContextGlobal = createContext(undefined);
-
 export const ContextProvider = ({ children }) => {
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
   const [Data, dispatch] = useReducer(reducer, initialState);
